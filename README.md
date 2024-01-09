@@ -36,9 +36,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Future Todo ##
 - Better token management to use redux or server or apollo or axis interceptor?
 - Maybe use a different package manager? yarn etc
+- Handling loading and error states
+- Add integration tests
+- More robuts unit tests, use enzyme
 
 ## Limitations/Issues ##
--  Api doesn’t return AssetClasses data for investors. Not sure why?
+-  Live Api doesn’t return AssetClasses data for investors. Not sure why? 
+In the sample success response in Swagger it does say it does.
 
 ### Other Available Scripts .... ###
 - 🧹 -  Run `npm run build`
