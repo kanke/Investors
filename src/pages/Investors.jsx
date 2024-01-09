@@ -32,7 +32,7 @@ const Investors = () => {
         },
         {
             selector: (row) => row.firmID,
-            cell: (row) => <Button onClick={() => openInvestor(row.firmID)}>View Detais</Button>,
+            cell: (row) => <Button onClick={() => openInvestor(row.firmID)}>View Details</Button>,
             ignoreRowClick: true,
             allowOverflow: true,
             button: true
@@ -76,7 +76,7 @@ const Investors = () => {
         navigate(`/investors/${id}`);
     };
 
-    if (investors.length) {
+
         return (<div>
             <h2>Investors</h2>
             <DataTable
@@ -88,8 +88,8 @@ const Investors = () => {
                 subHeader
                 subHeaderComponent
             />
+
         </div>);
-    }
 };
 
 export default Investors

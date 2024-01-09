@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 
 const Investor = () => {
     const {id} = useParams();
-    const [investor, setInvestor] = useState(null);
+    const [investor, setInvestor] = useState([]);
     const api_token = sessionStorage.getItem('api_token');
 
     useEffect(() => {
@@ -15,16 +15,13 @@ const Investor = () => {
         })
             .then((res) => res.json())
             .then((res) => {
-                console.log("res ", res.data)
-                console.log("pe ", res.data[0].pd)
                 setInvestor(res.data[0])
             });
     });
 
-    if (investor) {
         return (
             <div>
-                <h1>Investor details</h1>
+                <h2>Investor Details for {investor.firmID}</h2>
                 <div>PE(Private Equity): {investor.pe}</div>
                 <div>PD(Private Debt): {investor.pd}</div>
                 <div>RE(Real Estate): {investor.re}</div>
@@ -32,9 +29,8 @@ const Investor = () => {
                 <div>NR(Natural Resources): {investor.nr}</div>
                 <div>HF(Hedge Funds): {investor.hf}</div>
             </div>
-        )
-            ;
-    }
+        );
+
 };
 
 export default Investor;
