@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Investors from './pages/Investors';
+import Investor from "./pages/Investor";
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Routes>
         <Route exact path="/" element={<Investors />} />
+          <Route path="/investors/:id" element={<Investor />} />
       </Routes>
     </div>
   );
